@@ -1,0 +1,76 @@
+.fromWrapper {
+    width: 438px;
+    height: 463px;
+    background: #ffffff;
+    border: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 20px 0 0 12px;
+    margin-bottom: 10px;
+}
+
+%input {
+    background: #ffffff;
+    border: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.formItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+    label {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 9px;
+        margin-bottom: 3px;
+    }
+
+    input {
+        width: 211px;
+        height: 22px;
+        @extend %input;
+
+        &:disabled {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        &.error {
+            border: 1px solid #D91313;
+        }
+    }
+
+    textarea {
+        width: 420px;
+        height: 55px;
+        @extend %input;
+    }
+}
+
+.submitBlock {
+    display: flex;
+    justify-content: flex-end;
+
+    input[type="submit"] {
+        width: 85px;
+        height: 24.12px;
+        background: #52CF4F;;
+        border-radius: 5px;
+        color: white;
+        border: none;
+        cursor: pointer;
+
+        &:disabled {
+            background: #AFAFAF;
+            cursor: auto;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.SidePanel {
+    position: fixed;
+    display: flex;
+    margin-right: 34px;
+    width: 152px;
+    height: 100%;
+    background: #bdbdbd;
+}
+
+.sidePanelContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 35px;
+
+    p {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
