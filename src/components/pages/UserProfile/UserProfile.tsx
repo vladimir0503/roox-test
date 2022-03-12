@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { SubmitHandler } from 'react-hook-form';
-import { loadUser } from '../../../api/api';
+import { loadData } from '../../../api/api';
 import UserForm from './UserForm/UserForm';
 import Button from '../../common/Button/Button';
 
@@ -29,7 +29,7 @@ const UserProfile = (): JSX.Element => {
     };
 
     const getUserData = async (id: string | undefined) => {
-        const data = await loadUser(id);
+        const data = await loadData(id);
         setUser(data);
     };
 

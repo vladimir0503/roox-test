@@ -7,16 +7,15 @@ import {
 import SidePanel from './SidePanel/SidePanel';
 import UserList from '../pages/UserList/UserList';
 import UserProfile from '../pages/UserProfile/UserProfile';
-import { loadUsersList } from '../../api/api';
+import { loadData } from '../../api/api';
 
 import './App.scss';
 
 function App(): JSX.Element {
   const [users, setUsers] = React.useState<[]>([]);
-  const [user, setUser] = React.useState<{} | null>(null);
 
   const getUsers = async () => {
-    const users = await loadUsersList();
+    const users = await loadData();
     setUsers(users);
   };
 
